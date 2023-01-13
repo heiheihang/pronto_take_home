@@ -2,6 +2,8 @@ from git import Repo
 import os
 from datetime import datetime, timedelta, timezone
 
+blame_name = "Rufus"
+
 
 class GitStatusChecker:
     def __init__(self, git_dir):
@@ -18,3 +20,9 @@ class GitStatusChecker:
         commit_date_time = self.head_commit.committed_datetime.replace(tzinfo=timezone.utc)
         current_date_time = datetime.now().replace(tzinfo=timezone.utc)
         return commit_date_time + timedelta(days=days) >= current_date_time
+
+    def get_commit_author_name(self):
+        return self.head_commit.author.name
+
+    def author_name_is_not_to_blame(self):
+        return self.get_commit_author_name() != blame_name

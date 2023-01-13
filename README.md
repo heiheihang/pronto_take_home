@@ -37,6 +37,18 @@ recent commit: True
 blame Rufus: True
 ```
 
+## Testing:
+Some basic tests are added to this tool. *Pytest* needs to be installed:
+
+``` 
+pip3 install pytest
+```
+
+To run the tests:
+
+``` 
+pytest
+```
 ## TODO:
 Tests are incomplete. They could fail conditionally on the status of this git repo. Mocks are needed.
 

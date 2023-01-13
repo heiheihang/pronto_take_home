@@ -3,6 +3,7 @@ import os
 from datetime import datetime, timedelta, timezone
 
 blame_name = "Rufus"
+days = 7
 
 
 class GitStatusChecker:
@@ -26,3 +27,9 @@ class GitStatusChecker:
 
     def author_name_is_not_to_blame(self):
         return self.get_commit_author_name() != blame_name
+
+    def print_git_dir_report(self):
+        print("active branch: " + self.get_active_branch())
+        print("local changes: " + str(self.check_local_changes()))
+        print("recent commit: " + str(self.check_last_commit_is_within_7_days(days)))
+        print("blame Rufus: " + str(self.author_name_is_not_to_blame()))

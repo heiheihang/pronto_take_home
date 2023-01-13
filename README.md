@@ -23,7 +23,7 @@ pwd
 
 copy the path
 
-Run the git_dir report (replace the command line argument with the copied path)
+Get the git directory report for a specific directory (replace the command line argument with the copied path)
 
 ```
 python3 main.py /path/to/this/directory

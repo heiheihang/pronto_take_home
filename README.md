@@ -6,7 +6,9 @@
 
 Install the *GitPython* package:
 
-``` pip3 install GitPython```
+``` 
+pip3 install GitPython
+```
 
 ## Running the Program:
 
@@ -15,13 +17,17 @@ Install the *GitPython* package:
 ### Example
 On terminal, get current path (this directory)
 
-``pwd``
+```
+pwd
+```
 
 copy the path
 
 Run the git_dir report (replace the command line argument with the copied path)
 
-``python3 main.py /path/to/this/directory``
+```
+python3 main.py /path/to/this/directory
+```
 
 Output should be something like this:
 ```
